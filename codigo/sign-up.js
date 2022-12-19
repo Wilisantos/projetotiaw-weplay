@@ -18,49 +18,34 @@ let confirmSenha = document.querySelector('#confirmSenha')
 let labelConfirmSenha = document.querySelector('#labelConfirmSenha')
 let validConfirmSenha = false
 
-let msgError = document.querySelector('#msgError')
-let msgSuccess = document.querySelector('#msgSuccess')
+let labelrepeat = document.querySelector('#labelrepeat');
+let pswrepeat = document.querySelector("#psw-repeat");
+let validRepeat = false;
 
-nome.addEventListener('keyup', () => {
-  if(nome.value.length <= 2){
-    labelNome.setAttribute('style', 'color: red')
-    labelNome.innerHTML = 'Nome *Insira no minimo 3 caracteres'
-    nome.setAttribute('style', 'border-color: red')
-    validNome = false
-  } else {
-    labelNome.setAttribute('style', 'color: green')
-    labelNome.innerHTML = 'Nome'
-    nome.setAttribute('style', 'border-color: green')
-    validNome = true
-  }
+email.addEventListener("keyup", ()=>{
+    if( email  <= 2){
+        labelEmail.setAttribute ("Style, color red");
+        labelEmail.innerHTML = '<strong> Insira no minino 3 caracteres</strong>'
+        validEmail=false
+    }
+    else{
+        labelEmail.setAttribute('style', 'color: green')
+        labelEmail.innerHTML = '<strong> Email </strong>'
+        validEmail=true
+    }
 })
 
-usuario.addEventListener('keyup', () => {
-  if(usuario.value.length <= 4){
-    labelUsuario.setAttribute('style', 'color: red')
-    labelUsuario.innerHTML = 'Usuário *Insira no minimo 5 caracteres'
-    usuario.setAttribute('style', 'border-color: red')
-    validUsuario = false
-  } else {
-    labelUsuario.setAttribute('style', 'color: green')
-    labelUsuario.innerHTML = 'Usuário'
-    usuario.setAttribute('style', 'border-color: green')
-    validUsuario = true
-  }
-})
-
-senha.addEventListener('keyup', () => {
-  if(senha.value.length <= 5){
-    labelSenha.setAttribute('style', 'color: red')
-    labelSenha.innerHTML = 'Senha *Insira no minimo 6 caracteres'
-    senha.setAttribute('style', 'border-color: red')
-    validSenha = false
-  } else {
-    labelSenha.setAttribute('style', 'color: green')
-    labelSenha.innerHTML = 'Senha'
-    senha.setAttribute('style', 'border-color: green')
-    validSenha = true
-  }
+psw.addEventListener("keyup", ()=>{
+    if( psw <= 4){
+        labelsenha.setAttribute ("Style, color red");
+        labelsenha.innerHTML = '<strong> Insira no minino 5 caracteres</strong>'
+        validSenha=false
+    }
+    else{
+        labelsenha.setAttribute('style', 'color: green')
+        labelsenha.innerHTML = ' <strong> Senha </strong>'
+        validSenha=true
+    }
 })
 
 confirmSenha.addEventListener('keyup', () => {
@@ -110,27 +95,5 @@ function cadastrar(){
   }
 }
 
-btn.addEventListener('click', ()=>{
-  let inputSenha = document.querySelector('#senha')
-  
-  if(inputSenha.getAttribute('type') == 'password'){
-    inputSenha.setAttribute('type', 'text')
-  } else {
-    inputSenha.setAttribute('type', 'password')
-  }
-})
-
-btnConfirm.addEventListener('click', ()=>{
-  let inputConfirmSenha = document.querySelector('#confirmSenha')
-  
-  if(inputConfirmSenha.getAttribute('type') == 'password'){
-    inputConfirmSenha.setAttribute('type', 'text')
-  } else {
-    inputConfirmSenha.setAttribute('type', 'password')
-  }
-})
 
 
-
-  
-  
